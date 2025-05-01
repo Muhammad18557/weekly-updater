@@ -2,6 +2,8 @@
 
 Weekly-Updater is a tool that automates the generation of weekly reports by fetching GitHub pull request (PR) details, summarizing them using OpenAI, and sending these summaries directly to users on Slack. This project streamlines the reporting process for teams, offering efficient and automated PR tracking with insightful summaries.
 
+<img width="973" alt="Screenshot 2025-05-01 at 2 55 19 PM" src="https://github.com/user-attachments/assets/dc734aaa-3ca9-404d-95dd-4e4bcbaaf245" />
+
 ## Features
 
 #### Automated PR Fetching: Pulls data from GitHub repositories for the entire organization, grouped by users.
