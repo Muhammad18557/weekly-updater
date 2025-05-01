@@ -32,7 +32,7 @@ Create a copy of the `.env.template` file and rename it to `.env`. Fill in the r
 python3 main.py
 ```
 
-The local host will need to be made available remotely using a service like [`ngrok`](https://ngrok.com/) to allow Slack to send requests to the local server. Then, update the `slack/events` and `slack/interactions` URLs on the [`Slack App`](https://api.slack.com/apps) under the `Event Subscriptions` and `Interactivity & Shortcuts` sections, respectively.
+The local host will need to be made available remotely using a service like [`ngrok`](https://ngrok.com/) to allow Slack to send requests to the local server. Then, update the `slack/events` and `slack/interactions` URLs on the [`Slack App`](https://api.slack.com/apps) under the `Event Subscriptions` and `Interactivity & Shortcuts` sections, respectively. This is required when testing via localhost. Once the app is deployed, the URLs of the deployed backend server will need to be updated in the Slack app.
 
 ### Run the main script
 
@@ -40,4 +40,4 @@ The local host will need to be made available remotely using a service like [`ng
 python3 main.py
 ```
 
-This script fetches PRs from GitHub, generates summaries using OpenAI, and sends them to the respective users on Slack.
+This script fetches PRs from GitHub, generates summaries using OpenAI, and sends them to the respective users on Slack. It is advised to run a cron job to run this script weekly or whatever interval you want for updates.
