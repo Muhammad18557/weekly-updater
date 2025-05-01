@@ -1,0 +1,16 @@
+# virtual environment
+venv/
+myenv/
+
+
+# environment variables
+.env
+
+# python cache
+__pycache__/
+
+# logs
+*.log
+
+# certificates
+certs/

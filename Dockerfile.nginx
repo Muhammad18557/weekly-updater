@@ -1,0 +1,15 @@
+FROM nginx:alpine
+
+# Create directory for certificates
+RUN mkdir -p /etc/nginx/ssl/
+
+# Copy SSL certificates
+COPY ./certs/cloudfare.crt /etc/nginx/ssl/
+COPY ./certs/cloudfare.key /etc/nginx/ssl/
+
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose ports
+EXPOSE 80
+EXPOSE 443

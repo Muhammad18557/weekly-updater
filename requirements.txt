@@ -1,0 +1,10 @@
+requests
+python-dotenv
+reportlab
+openai
+slack-sdk
+fastapi
+uvicorn
+requests
+aiohttp
+python-multipart

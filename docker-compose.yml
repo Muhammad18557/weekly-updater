@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - slack-server
+    networks:
+      - app-network
+
+  slack-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.slack-server
+    expose:
+      - "80"
+    environment:
+      - GITHUB_TOKEN
+      - OPENAI_API_KEY
+      - SLACK_TOKEN
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
