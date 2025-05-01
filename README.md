@@ -2,6 +2,8 @@
 
 Weekly-Updater is a tool that automates the generation of weekly reports by fetching GitHub pull request (PR) details, summarizing them using OpenAI, and sending these summaries directly to users on Slack. This project streamlines the reporting process for teams, offering efficient and automated PR tracking with insightful summaries.
 
+By default, the prompt groups a developer’s PRs into three categories: “New Features Added,” “Incremental Improvements,” and “Bugs Fixed.” However, this structure can be easily customized by modifying the prompt to fit specific team needs. Here's an example of how this reported for a developer at Defog AI (YC W23):
+
 <img width="973" alt="Screenshot 2025-05-01 at 2 55 19 PM" src="https://github.com/user-attachments/assets/dc734aaa-3ca9-404d-95dd-4e4bcbaaf245" />
 
 ## Features
